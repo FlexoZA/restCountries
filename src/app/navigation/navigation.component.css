@@ -1,15 +1,19 @@
 /* Toolbar*/
 .toolbar-spacer {
-    flex: 1 1 auto;
+  flex: 1 1 auto;
 }
 
 .toolbar-button {
-    margin-top: 22px;
-    margin-left: 15px;
+  margin-top: 22px;
+  margin-left: 15px;
 }
 /* //Toolbar*/
 
 .dialog-actions {
-    display: flex;
-    justify-content: flex-end;
-  }
+  display: flex;
+  justify-content: flex-end;
+}
+
+h1 {
+  color: whitesmoke !important;
+}

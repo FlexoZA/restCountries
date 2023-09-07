@@ -1,21 +1,50 @@
 <div class="container">
-  <mat-grid-list [cols]="cols" rowHeight="2:1">
-    <mat-grid-tile>1</mat-grid-tile>
-    <mat-grid-tile>2</mat-grid-tile>
-    <mat-grid-tile>3</mat-grid-tile>
-    <mat-grid-tile>4</mat-grid-tile>
-    <mat-grid-tile>1</mat-grid-tile>
-    <mat-grid-tile>2</mat-grid-tile>
-    <mat-grid-tile>3</mat-grid-tile>
-    <mat-grid-tile>4</mat-grid-tile>
-    <mat-grid-tile>1</mat-grid-tile>
+  <div class="row">
+    <div class="col-3">1</div>
+    <div class="col-3">2</div>
+    <div class="col-6">3</div>
+  </div>
+
+  <!-- Search -->
+  <mat-grid-list cols="1">
+    <mat-form-field class="search">
+      <mat-label
+        ><mat-icon
+          aria-hidden="false"
+          aria-label="Example home icon"
+          fontIcon="search"
+        ></mat-icon
+        >Search</mat-label
+      >
+      <input matInput placeholder="Search for country" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Filter by region</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let food of foods" [value]="food.value">
+          {{ food.viewValue }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </mat-grid-list>
+  <!-- //Search -->
+
+  <mat-grid-list [cols]="cols" rowHeight="600px">
+    <mat-grid-tile
+      ><img
+        class="image"
+        src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+        alt="Photo of a Shiba Inu"
+      />
+      <h1>Hallo world</h1>
+    </mat-grid-tile>
     <mat-grid-tile>2</mat-grid-tile>
     <mat-grid-tile>3</mat-grid-tile>
     <mat-grid-tile>4</mat-grid-tile>
   </mat-grid-list>
   <mat-paginator
     [length]="100"
-    [pageSize]="10"
+    [pageSize]="12"
     [pageSizeOptions]="[4, 8, 12, 100]"
     aria-label="Select page"
   >
