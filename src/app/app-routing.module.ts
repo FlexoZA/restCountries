@@ -12,7 +12,7 @@ const routes: Routes = [
   //About
   {
     component:AboutComponent,
-    path: '/about'
+    path: 'about'
   }
 ];
 

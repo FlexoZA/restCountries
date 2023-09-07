@@ -1,5 +1,30 @@
 <!-- Navigation-->
 <mat-toolbar color="primary">
-    <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="public"></mat-icon><span>Countries of the world</span>
+    <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="public"></mat-icon><span>Countries of the
+        world</span>
+    <span class="toolbar-spacer"></span>
+    <button mat-icon-button (click)="openDialog()" aria-label="Info">
+        <mat-icon>more_vert</mat-icon>
+    </button>
 </mat-toolbar>
 <!-- //Navigation -->
+
+<!-- Inline Dialog content-->
+<ng-template #DialogContent>
+    <h1 mat-dialog-title>General info</h1>
+    <div mat-dialog-content>
+        <mat-list role="list">
+            <mat-list-item role="listitem">Angular CLI: 16.2.1</mat-list-item>
+            <mat-list-item role="listitem">Node: 18.17.1</mat-list-item>
+            <mat-list-item role="listitem">Package Manager: npm 9.6.7</mat-list-item>
+        </mat-list>    
+    </div>
+    <mat-divider></mat-divider>
+    <div mat-dialog-actions class="dialog-actions">
+        <button mat-button mat-dialog-close color="warn">
+            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="close"></mat-icon>
+            Close
+        </button>
+    </div>
+</ng-template>
+<!-- //Inline Dialog content-->

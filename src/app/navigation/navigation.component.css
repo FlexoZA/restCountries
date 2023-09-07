@@ -8,3 +8,8 @@
     margin-left: 15px;
 }
 /* //Toolbar*/
+
+.dialog-actions {
+    display: flex;
+    justify-content: flex-end;
+  }
