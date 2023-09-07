@@ -1,0 +1,10 @@
+/* Toolbar*/
+.toolbar-spacer {
+    flex: 1 1 auto;
+}
+
+.toolbar-button {
+    margin-top: 22px;
+    margin-left: 15px;
+}
+/* //Toolbar*/
